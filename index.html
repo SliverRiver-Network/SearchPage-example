@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="renderer" content="webkit"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <title>Galaxy Search</title>
+  <meta name="description" content="银河搜索网页" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css?v=1.0.2">
+  <link rel="stylesheet" href="./src/index.css">
+  <link rel="icon" href="https://img.restent.win/me/profile/Favicon.ico">
+</head>
+<body
+  class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-light-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-row mdui-center" id="p-d">
+<header class="appbar mdui-appbar mdui-appbar-fixed">
+  <div class="mdui-toolbar mdui-color-theme">
+    <span
+      class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+      mdui-drawer="{target: '#main-drawer', swipe: true}"
+    >
+      <i class="mdui-icon material-icons">menu</i>
+    </span>
+    <a href="./" class="mdui-typo-headline mdui-hidden-xs">Galaxy Search</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="https://github.com/Restent">
+      <i class="mdui-icon material-icons">code</i>
+    </a>
+  </div>
+</header>
+<div class="mdui-drawer" id="main-drawer">
+  <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+    <div class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+          <a href="https://blog.restent.win" class="mdui-list-item-content">Home Page</a>
+        </div>
+      </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">location_city</i>
+        <a href="https://blog.restent.win" class="mdui-list-item-content">Galaxy City</a>
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">camera_alt</i>
+        <a href="https://neko3327.restent.win" class="mdui-list-item-content">Neko3327's Blog</a>
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">book</i>
+        <a href="https://pages.restent.win" class="mdui-list-item-content">Galaxy Pages Archive</a>
+      </div>
+    </div>
+  </div>
+</div>
+<a id="anchor-top"></a>
+
+
+<div class="container p-index mdui-container mdui-typo mdui-center" style="max-width: 700px;">
+  <h1 class="mdui-text-color-theme">Galaxy Search</h1>
+  <p>Search what you like......</p>
+  <div class="mdui-textfield mdui-textfield-floating-label">
+    <select name="" id="" class="mdui-select" mdui-select="{position: 'bottom'}">
+        <option value="https://www.baidu.com/s" selected>百度</option>
+        <option value="https://cn.bing.com/search">必应</option>
+        <option value="https://www.google.com/search?q=">Google（大陆不可用）</option>
+        <option value="https://yandex.com/search/">Yandex</option>
+    </select>
+    <label class="mdui-textfield-label">Type here to search</label>
+    <input class="mdui-textfield-input" type="search" name="" id="text">
+</br>
+    <button class="label mdui-btn mdui-btn-raised mdui-color-theme-accent" type="button">Search</button>
+<hr/>
+    <h1>关于 Galaxy Search</h1>
+    <p>Galaxy Search 基于 <a href="https://juejin.cn/post/7057867467720228872">此教程</a> 制作，使用 MDUI 优化界面。</p>
+    <p>Galaxy Search 隶属 <a href="https://github.com/SliverRiver-Network">SliverRiver Network</a>，但由于部署在 Cloudflare Workers（出于速度考虑），本站点暂不在 GitHub 上开源。</p>
+    <p>您可以在侧边栏访问我的其它站点。</p>
+  </div>
+
+</div>
+
+<div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-grey-200">
+<p>
+  <span id="copyright"></span>
+  <span>使用 MDUI 制作.</span>
+</p>
+</div>
+
+<script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js?v=1.0.2"></script>
+<script src="./src/index.js"></script>
+<script src="./src/search.js"></script>
+
+<script>
+  const year = (new Date()).getFullYear();
+  document.getElementById("copyright").innerHTML = "© 2019 - " + year + " Restent Ou. "
+</script>
